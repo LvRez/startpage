@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startpage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #1a1b26;
+            --card-bg: rgba(36, 40, 59, 0.5);
+            --accent: #7aa2f7;
+            --text-main: #cfc9c2;
+            --text-dim: #565f89;
+        }
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass { 
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.3s ease;
+        }
+        .link-card:hover {
+            border-color: var(--accent);
+            background: rgba(122, 162, 247, 0.1);
+            transform: translateY(-3px);
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col xl:flex-row">
+
+    <!-- SIDEBAR -->
+    <aside class="w-full xl:w-96 p-8 xl:p-16 flex flex-col justify-between xl:h-screen sticky top-0">
+        <div>
+            <div class="mb-12">
+                <h1 id="clock" class="text-6xl font-light mono text-white mb-2">00:00</h1>
+                <p id="date" class="text-sm uppercase tracking-[0.3em] text-[#565f89]">Loading...</p>
+            </div>
+            
+            <div class="relative group max-w-sm">
+                <form action="https://www.google.com/search" method="GET">
+                    <input type="text" name="q" placeholder="Search Command..." 
+                        class="bg-transparent border-b border-[#565f89] w-full py-2 outline-none focus:border-[#7aa2f7] transition-colors text-lg mono">
+                </form>
+            </div>
+        </div>
+
+        <div class="hidden xl:block">
+            <p class="text-[10px] text-[#565f89] mono uppercase tracking-widest leading-loose">
+                Status: Online<br>
+                Host: GitHub Pages<br>
+                UI: Tokyo Night V2
+            </p>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT - 4 COLUMN GRID -->
+    <main class="flex-1 p-8 xl:p-16">
+        <div id="categories" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4 gap-8">
+            <!-- Categories from JSON load here -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

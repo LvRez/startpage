@@ -1,0 +1,34 @@
+[
+  {
+    "category": "Essentials",
+    "links": [
+      { "name": "Gmail", "url": "https://mail.google.com" },
+      { "name": "Calendar", "url": "https://calendar.google.com" },
+      { "name": "GitHub", "url": "https://github.com" }
+    ]
+  },
+  {
+    "category": "Entertainment",
+    "links": [
+      { "name": "YouTube", "url": "https://youtube.com" },
+      { "name": "Netflix", "url": "https://netflix.com" },
+      { "name": "Twitch", "url": "https://twitch.tv" }
+    ]
+  },
+  {
+    "category": "Social",
+    "links": [
+      { "name": "Reddit", "url": "https://reddit.com" },
+      { "name": "Twitter", "url": "https://twitter.com" },
+      { "name": "Discord", "url": "https://discord.com" }
+    ]
+  },
+  {
+    "category": "Resources",
+    "links": [
+      { "name": "ChatGPT", "url": "https://chatgpt.com" },
+      { "name": "StackOverflow", "url": "https://stackoverflow.com" },
+      { "name": "MDN Docs", "url": "https://developer.mozilla.org" }
+    ]
+  }
+]
