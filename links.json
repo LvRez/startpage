@@ -1,18 +1,11 @@
 [
   {
-    "category": "Essentials",
+    "category": "Development",
     "links": [
-      { "name": "Gmail", "url": "https://mail.google.com" },
-      { "name": "Calendar", "url": "https://calendar.google.com" },
-      { "name": "GitHub", "url": "https://github.com" }
-    ]
-  },
-  {
-    "category": "Entertainment",
-    "links": [
-      { "name": "YouTube", "url": "https://youtube.com" },
-      { "name": "Netflix", "url": "https://netflix.com" },
-      { "name": "Twitch", "url": "https://twitch.tv" }
+      { "name": "GitHub", "url": "https://github.com" },
+      { "name": "StackOverflow", "url": "https://stackoverflow.com" },
+      { "name": "MDN Docs", "url": "https://developer.mozilla.org" },
+      { "name": "CodePen", "url": "https://codepen.io" }
     ]
   },
   {
@@ -20,15 +13,26 @@
     "links": [
       { "name": "Reddit", "url": "https://reddit.com" },
       { "name": "Twitter", "url": "https://twitter.com" },
-      { "name": "Discord", "url": "https://discord.com" }
+      { "name": "Discord", "url": "https://discord.com" },
+      { "name": "YouTube", "url": "https://youtube.com" }
     ]
   },
   {
-    "category": "Resources",
+    "category": "Media",
     "links": [
+      { "name": "Netflix", "url": "https://netflix.com" },
+      { "name": "Twitch", "url": "https://twitch.tv" },
+      { "name": "Spotify", "url": "https://open.spotify.com" },
+      { "name": "Apple Music", "url": "https://music.apple.com" }
+    ]
+  },
+  {
+    "category": "Tools",
+    "links": [
+      { "name": "Gmail", "url": "https://mail.google.com" },
       { "name": "ChatGPT", "url": "https://chatgpt.com" },
-      { "name": "StackOverflow", "url": "https://stackoverflow.com" },
-      { "name": "MDN Docs", "url": "https://developer.mozilla.org" }
+      { "name": "Notion", "url": "https://notion.so" },
+      { "name": "Google Drive", "url": "https://drive.google.com" }
     ]
   }
 ]
