@@ -39,8 +39,8 @@ function updateClock() {
     const now = new Date();
     // 12-Hour Format
     document.getElementById('clock').textContent = now.toLocaleTimeString('en-US', { 
-        hour: '2-digit', minute: '2-digit', hour12: true 
-    }).replace(/ [AP]M/, ''); // Removes AM/PM for clean look
+    hour: 'numeric', minute: '2-digit', hour12: true 
+});
     
     document.getElementById('date').textContent = now.toLocaleDateString('en-US', { 
         weekday: 'short', month: 'short', day: 'numeric' 
