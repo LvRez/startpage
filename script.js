@@ -43,9 +43,11 @@ async function loadLinks() {
 
 function updateClock() {
     const now = new Date();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    document.getElementById('clock').textContent = `${hours}:${minutes}`;
+    document.getElementById('clock').textContent = now.toLocaleTimeString('en-US', { 
+    hour: 'numeric', 
+    minute: '2-digit', 
+    hour12: true 
+});
     
     const options = { weekday: 'long', month: 'short', day: 'numeric' };
     document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
