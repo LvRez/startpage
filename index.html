@@ -9,66 +9,57 @@
     <style>
         :root {
             --bg-color: #1a1b26;
-            --card-bg: rgba(36, 40, 59, 0.5);
+            --card-bg: rgba(36, 40, 59, 0.4);
             --accent: #7aa2f7;
             --text-main: #cfc9c2;
             --text-dim: #565f89;
         }
-        body { 
-            background-color: var(--bg-color); 
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-        }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif; margin: 0; overflow-x: hidden; }
         .mono { font-family: 'JetBrains Mono', monospace; }
-        .glass { 
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            transition: all 0.3s ease;
-        }
-        .link-card:hover {
-            border-color: var(--accent);
-            background: rgba(122, 162, 247, 0.1);
-            transform: translateY(-3px);
-        }
-        /* Custom scrollbar for a cleaner look */
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: var(--bg-color); }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        .glass { background: var(--card-bg); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.03); transition: all 0.3s ease; }
+        .link-card:hover { border-color: var(--accent); background: rgba(122, 162, 247, 0.1); transform: translateY(-3px); }
+        select { appearance: none; -webkit-appearance: none; }
+        .today { color: var(--accent); font-weight: bold; border-bottom: 2px solid var(--accent); }
     </style>
 </head>
-<body class="min-h-screen flex flex-col xl:flex-row">
+<body class="min-h-screen flex flex-col lg:flex-row">
 
-    <!-- SIDEBAR -->
-    <aside class="w-full xl:w-96 p-8 xl:p-16 flex flex-col justify-between xl:h-screen sticky top-0">
-        <div>
-            <div class="mb-12">
-                <h1 id="clock" class="text-6xl font-light mono text-white mb-2">00:00</h1>
-                <p id="date" class="text-sm uppercase tracking-[0.3em] text-[#565f89]">Loading...</p>
-            </div>
+    <!-- SIDEBAR (Clock, Date, Calendar) -->
+    <aside class="w-full lg:w-80 p-10 flex flex-col justify-start lg:h-screen lg:fixed left-0 border-r border-white/5">
+        <div class="mb-10">
+            <h1 id="clock" class="text-5xl font-light mono text-white mb-2 tracking-tighter">00:00</h1>
+            <p id="date" class="text-xs uppercase tracking-[0.3em] text-[#565f89] mb-8 font-semibold">Loading...</p>
             
-            <div class="relative group max-w-sm">
-                <form action="https://www.google.com/search" method="GET">
-                    <input type="text" name="q" placeholder="Search Command..." 
-                        class="bg-transparent border-b border-[#565f89] w-full py-2 outline-none focus:border-[#7aa2f7] transition-colors text-lg mono">
-                </form>
+            <!-- Calendar Container -->
+            <div class="mt-10">
+                <p id="month-name" class="text-[10px] mono uppercase tracking-widest text-[#7aa2f7] mb-4"></p>
+                <div id="calendar-grid" class="grid grid-cols-7 gap-y-3 text-center text-[10px] mono text-[#565f89]">
+                    <!-- Days injected by JS -->
+                </div>
             </div>
-        </div>
-
-        <div class="hidden xl:block">
-            <p class="text-[10px] text-[#565f89] mono uppercase tracking-widest leading-loose">
-                Status: Online<br>
-                Host: GitHub Pages<br>
-                UI: Tokyo Night V2
-            </p>
         </div>
     </aside>
 
-    <!-- MAIN CONTENT - 4 COLUMN GRID -->
-    <main class="flex-1 p-8 xl:p-16">
-        <div id="categories" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4 gap-8">
-            <!-- Categories from JSON load here -->
+    <!-- MAIN CONTENT (Categories and Search) -->
+    <main class="flex-1 flex flex-col items-center justify-center p-6 lg:ml-80 min-h-screen">
+        
+        <!-- Categories Grid -->
+        <div id="categories" class="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-6 w-full max-w-6xl mb-16">
+            <!-- Loaded from JSON -->
+        </div>
+
+        <!-- Centered Search Bar -->
+        <div class="w-full max-w-2xl px-4">
+            <form id="search-form" action="https://www.google.com/search" method="GET" class="flex items-center glass rounded-2xl overflow-hidden p-2">
+                <select id="engine-select" class="bg-transparent text-[#565f89] mono text-[10px] uppercase px-4 outline-none cursor-pointer hover:text-white transition-colors">
+                    <option value="https://www.google.com/search">Google</option>
+                    <option value="https://duckduckgo.com/">DuckDuckGo</option>
+                    <option value="https://search.brave.com/search">Brave</option>
+                </select>
+                <div class="w-[1px] h-6 bg-white/10 mx-2"></div>
+                <input type="text" name="q" placeholder="Search the web..." autocomplete="off"
+                    class="bg-transparent flex-1 py-3 px-4 outline-none text-white placeholder-[#565f89] text-sm mono">
+            </form>
         </div>
     </main>
 
