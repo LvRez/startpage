@@ -1,38 +1,38 @@
 [
   {
-    "category": "Development",
-    "links": [
-      { "name": "GitHub", "url": "https://github.com" },
-      { "name": "StackOverflow", "url": "https://stackoverflow.com" },
-      { "name": "MDN Docs", "url": "https://developer.mozilla.org" },
-      { "name": "CodePen", "url": "https://codepen.io" }
-    ]
-  },
-  {
-    "category": "Social",
-    "links": [
-      { "name": "Reddit", "url": "https://reddit.com" },
-      { "name": "Twitter", "url": "https://twitter.com" },
-      { "name": "Discord", "url": "https://discord.com" },
-      { "name": "YouTube", "url": "https://youtube.com" }
-    ]
-  },
-  {
     "category": "Media",
     "links": [
-      { "name": "Netflix", "url": "https://netflix.com" },
+      { "name": "YouTube", "url": "https://youtube.com" },
+      { "name": "AnimeKai", "url": "https://anikai.to" },
       { "name": "Twitch", "url": "https://twitch.tv" },
-      { "name": "Spotify", "url": "https://open.spotify.com" },
-      { "name": "Apple Music", "url": "https://music.apple.com" }
+      { "name": "Cineby", "url": "https://www.cineby.sc" }
     ]
   },
   {
-    "category": "Tools",
+    "category": "Games",
     "links": [
-      { "name": "Gmail", "url": "https://mail.google.com" },
-      { "name": "ChatGPT", "url": "https://chatgpt.com" },
-      { "name": "Notion", "url": "https://notion.so" },
-      { "name": "Google Drive", "url": "https://drive.google.com" }
+      { "name": "FitGirl Repacks", "url": "https://fitgirl-repacks.site" },
+      { "name": "AnkerGames", "url": "https://ankergames.net" },
+      { "name": "Dodi Repacks", "url": "https://dodi-repacks.site" },
+      { "name": "Online-Fix.me", "url": "https://online-fix.me" }
+    ]
+  },
+  {
+    "category": "Piracy",
+    "links": [
+      { "name": "FMHY", "url": "https://fmhy.net" },
+      { "name": "1337x", "url": "https://1337x.to" },
+      { "name": "CS.RIN.RU", "url": "https://cs.rin.ru" },
+      { "name": "Software", "url": "https://cracksurl.com" }
+    ]
+  },
+  {
+    "category": "Education",
+    "links": [
+      { "name": "Anna's Archive", "url": "https://annas-archive.gl" },
+      { "name": "Z-Library", "url": "https://z-lib.gd" },
+      { "name": "Courses", "url": "https://github.com/MasterBrian99/Free-Courses-For-Everyone" },
+      { "name": "Learn Anything", "url": "https://learn-anything.xyz/" }
     ]
   }
 ]
